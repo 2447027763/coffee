@@ -1,0 +1,126 @@
+.settlement{
+    height: 100%;
+    background: #FCF1EE;
+    overflow: hidden;
+    .settlementBox{
+        position: relative;
+        top: -70px;
+        margin: 15px;
+        z-index: 333;
+        .addressBox{
+            padding: 5px 15px;
+            border: 1px solid #994A1B;
+            border-radius: 20px;
+            background: #FFF;
+            .addressBoxSelect{
+                font-size: 14px;
+                color: #666;
+                height: 30px;
+                line-height: 30px;
+            }
+            .addressContent{
+                height: 70px;
+                display: flex;
+                flex-direction: column;
+                >div{
+                    flex: 1;
+                    line-height: 35px;
+                    &.addressTop{
+                        .addressName{
+                            display: inline-block;
+                            font-size: 16px;
+                            color: #994A1B;
+                            font-weight: bolder;
+                            margin-right: 25px;
+                        }
+                        .addressPhone{
+                            display: inline-block;
+                            font-size: 14px;
+                            margin-right: 25px;
+                        }
+                        .addressIsDefault{
+                            color: #FFF;
+                            text-align: center;
+                            width: 50px;
+                            height: 25px;
+                            line-height: 25px;
+                            background: #994A1B;
+                            border-radius: 30px;
+                            display: inline-block;
+                            font-size: 14px;
+                        }
+
+                    }
+                    &.addressBottom{
+                        font-size: 14px;
+                        color: #999;
+                    }
+                   
+
+                }
+            }
+        }
+        .midBox{
+            height: 30px;
+            margin: 0 auto;
+            width: 200px;
+            border-left: 2px dashed #994A1B;
+            border-right: 2px dashed #994A1B;
+        }
+        .shoppingCarBox{
+            height: 355px;
+            border: 1px solid #994A1B;
+            border-radius: 20px;
+            background: #FFF;
+            padding: 15px 15px 0 15px;
+            display: flex;
+            flex-direction: column;
+            .shoppingCarTitle{
+                font-size: 14px;
+                color: #555;
+                line-height: 20px;
+                height: 20px;
+                flex-grow: 0;
+            }
+            .shoppingCarItems{
+                flex-grow: 1;
+                overflow: scroll;
+            }
+            .shoppingCarCount{
+                border-top: 2px dashed #994A1B;
+                height: 50px;
+                flex-grow: 0;
+                color: #999;
+                >div{
+                    height: 50%;
+                    line-height: 25px;
+                    &.settlementCount{
+                        display: flex;
+                        justify-content: space-between;
+                        .num{
+                            font-size: 14px;
+                        }
+                        .totalPrice{
+                            font-size: 16px;
+                            color: #994A1B;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    .settlementButton{
+        padding: 10px 20px;
+        width: calc(100% - 40px) ;
+        position: fixed;
+        bottom: 0;
+        button{
+            overflow: hidden;
+            border-radius:10px ;
+        }
+    }
+
+    
+}

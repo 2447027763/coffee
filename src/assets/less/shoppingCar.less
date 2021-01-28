@@ -1,0 +1,158 @@
+.shoppingCar {
+    width: 100%;
+    height: 100%;
+    background: #FFFCF7;
+    padding-bottom: 40px;
+    .carHeader {
+        width: 100%;
+
+        .carTitle {
+            color: #98491B;
+            font-weight: bolder;
+        }
+
+        .carOption {
+            color: #98491B;
+        }
+    }
+
+    .carList {
+        background: #FFFCF7;
+        .van-list{
+            padding-bottom: 100px;
+        }
+        button{
+            height: 100%;
+            background: #98491B;
+            border-color: #98491B;
+        }
+        .carItem {
+            height: 100px;
+            box-shadow: 0 0 5px 1px #eee;
+            background: #FFF;
+            margin: 15px 15px 1px 15px;
+            width: calc(100% - 30px) ;
+            display: flex;
+            align-items: center;
+            
+            .carCheckbox {
+                margin: 10px;
+                flex-grow: 0;
+                .van-checkbox__icon--checked {
+                    .van-icon {
+                        color: #FFF !important;
+                    }
+                }
+
+                .van-icon {
+                    color: #98491B;
+                    border-color: rgb(152, 73, 27);
+                    background-color: #FFF;
+                }
+            }
+            .carSamllImg{
+                flex-grow: 0;
+                width: 60px;
+                height: 60px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .carMessage{
+                max-width: 120px;
+                margin-left: 10px;
+                padding: 20 0px;
+                height: calc(100% - 40px) ;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                .carName{
+                    font-size: 16px;
+                }
+                .carEnName{
+                    font-size: 14px;
+                    color: #aaa;
+                }
+                .carDesc{
+                    color: #666;
+                }
+                
+            }
+            .carCount {
+                height: calc(100% - 20px) ;
+                justify-content: space-around;
+
+                display: flex;
+                width: 100px;
+                flex-direction: column;
+                flex-grow: 0;
+                .carPrice{
+                    text-align: right;
+                    padding-right: 5px;
+                    font-size: 16px;
+                    color: #98491B;
+                    >span{
+                        font-size: 20px;
+                    }
+                }
+                .van-stepper {
+                    button {
+                        width: 30px !important;
+                        height: 30px !important;
+
+                        &.van-stepper__plus {
+                            background: #994A1B;
+                        }
+
+                        &.van-stepper__minus {
+                            border: 1px solid #994A1B;
+                            background: #FFF;
+                            color: #994A1B;
+                        }
+
+                        &.van-stepper__minus--disabled {
+                            background: #D6D5D5;
+                            color: #FFF;
+                            border: 1px solid #D6D5D5;
+                        }
+
+                        &.van-stepper__minus::before,
+                        .van-stepper__plus::before {
+                            height: 3px !important;
+                            width: 60% !important;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    .shoppingCarSubimt{
+        .van-submit-bar{
+            margin-bottom: 50px;
+            .van-submit-bar__bar{
+                justify-content: space-between;
+                .van-button{
+                    background: #98491B;
+                }
+                .van-checkbox{
+                    .van-checkbox__icon--checked {
+                        .van-icon {
+                            background: #98491B;
+                            color: #FFF !important;
+                        }
+                    }
+    
+                    .van-icon {
+                        color: #98491B;
+                        border-color: rgb(152, 73, 27);
+                        background-color: #FFF;
+                    }
+                }
+            }
+            
+        }
+    }
+}

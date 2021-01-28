@@ -1,0 +1,79 @@
+.myOrder{
+    background: #FCF1EE;
+    height: 100%;
+    .myOrderBox{
+        overflow: hidden;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin: 15px;
+        width: calc(100% - 40px);
+        background: #FFF;
+        position: relative;
+        z-index: 222;
+        top: -50px;
+        border-radius: 30px;
+        border: 1px solid #994A1B;
+        .completed,.inCompleted{
+            border-bottom:1px solid #994A1B ;
+            .completedTop,.inCompletedTop{
+                height: 30px;
+                line-height: 30px;
+                display: flex;
+                justify-content: space-between;
+                .num{
+                    font-size: 14px;
+                }
+                .rightDelect{
+                    /deep/ .van-icon{
+                        vertical-align: top;
+                    } 
+                }
+            }
+            .shoppingCarCount{
+                border-top: 2px dashed #994A1B;
+                height: 50px;
+                flex-grow: 0;
+                color: #999;
+                >div{
+                    height: 50%;
+                    line-height: 25px;
+                    &.settlementCount{
+                        display: flex;
+                        justify-content: space-between;
+                        .num{
+                            font-size: 14px;
+                            margin-left: 10px;
+                        }
+                        .totalPrice{
+                            margin-right: 10px;
+                            font-size: 16px;
+                            color: #994A1B;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+        .title{
+            margin-top: 10px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #994A1B;
+            width: 100%;
+            font-size: 20px;
+            background: #FCF1EE;
+            border-top: 10px solid #994A1B;
+            
+        }
+    }
+    /deep/ .van-tabs__nav--card{
+        margin: 0;
+    }
+    /deep/ .van-tab--active{
+        span{
+            color: #994A1B;
+            font-weight: bolder;
+        }
+    }
+}

@@ -1,28 +1,67 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view />
+    <TabNav></TabNav>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TabNav from "./components/TabNav";
+import {mapState,mapMutations} from "vuex";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
-</script>
+    TabNav,
+  },
+  computed:{
+    ...mapState(["shoppingCarCount","isLoadingCarCount"])
+  },
+  methods:{
+    ...mapMutations(["changeShoppingCarCount","changeIsLoadingCarCount"])
+  },
+  created() {
+    let token = this.$cookies.get("tokenString");
+    if (!token) {
+      return;
+    }
+    if (this.isLoadingCarCount) {
+      return;
+    }
+    this.$axios({
+      method: "get",
+      url: "/findAllShopcart",
+      params: {
+        appkey: this.appkey,
+        tokenString: token,
+      },
+    }).then((res) => {
+      if (res.data.code == 5000) {
+        
+        this.changeShoppingCarCount(res.data.result.length);
+        this.changeIsLoadingCarCount(true);
+      } else {
+        this.$toast(res.data.msg);
+        // console.log(res);
+      }
+    });
 
-<style>
+  },
+};
+</script>
+<style lang="less">
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 #app {
+  height: 100%;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+.space {
+  width: 100%;
+  height: 50px;
 }
 </style>

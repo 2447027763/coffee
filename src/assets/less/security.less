@@ -1,0 +1,48 @@
+.security{
+    .securityBox{
+        overflow: hidden;
+        position: relative;
+        z-index: 999;
+        height: 200px;
+        background: #FFFFFF;
+        border-radius: 20px;
+        top: -20px;
+        padding: 20px;
+        .van-cell{
+            border-radius: 20px;
+            border: 1px solid #994A1B;
+            margin-bottom: 10px;
+        }
+
+    }
+    .bottomBotton{
+        padding: 20px;
+        button{
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    }
+    .rePassword{
+        .passwordBox{
+            height: 230px;
+            .usersInput{
+                height: 230px;
+                position: relative;
+            }
+            // /deep/ .van-cell{
+            //     padding-left:0 ;
+            //     padding-right:0 ;
+            // }
+        }
+        
+        .van-popup{
+            padding: 20px;
+            width: calc(100% - 40px) ;
+        }
+        .btnSubmit{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}

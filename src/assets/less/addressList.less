@@ -1,0 +1,58 @@
+.addressList{
+    height: 100%;
+    background: #FFFCF7;
+    .addressListHeader{
+        .addressListTitle{
+            color: #98491B;
+            font-size: 20px;
+        }
+        .addressAdd{
+            font-size: 14px;
+            color: #98491B;
+        }
+        /deep/ .van-icon{
+            vertical-align: middle;
+        }
+    }
+    .addressListBox{
+        background: #FFFCF7;
+        .van-address-item{
+            border: 1px solid #98491B;
+        }
+    }
+    /deep/ .van-radio__icon{
+        width: 30px;
+        height: 30px;
+        
+        .van-icon{
+            width: 100%;
+            height: 100%;
+            border-color: #98491B;
+            color: #98491B;
+        }
+        .van-icon::before{
+            font-size: 20px;
+            color: #98491B;
+        }
+    }
+    /deep/ .van-button--danger {
+        background: #98491B;
+        border-color: #98491B;
+    }
+    .van-radio__icon--checked{
+        //  .van-icon::before{
+        //     color: #FFF !important;
+        //     background: #98491B;
+        // }
+            .van-icon{
+                background: #98491B;
+            }
+            .van-icon::before{
+                color: #FFF;
+            } 
+        
+        }
+    /deep/ .van-tag--danger{
+        background: #98491B;
+    }
+}

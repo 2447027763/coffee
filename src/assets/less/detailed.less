@@ -1,0 +1,293 @@
+.detailed{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .detailedBack{
+        opacity: 0.7;
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        left: 20px;
+        top: 20px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .detailedBox{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .info{
+            padding: 15px;
+            border-radius: 20px;
+            background: #FFF;
+            flex-grow: 1;
+            width: calc(100% - 30px);
+            position: relative;
+            top:-20px;
+            .defaultSelect{
+                color: #555;
+                text-align: center;
+                position: absolute;
+                left: 50%;
+                top: 100px;
+                transform: translateX(-50%);
+                svg{
+                    animation: flash 2s linear infinite;
+                    width: 30px;
+                    height: 30px;
+                    margin: 0 auto;
+                }
+            }
+            .shoppingCarCount{
+                position: absolute;
+                right: 30px;
+                top: 90px;
+                width: 40px;
+                height: 40px; 
+                font-size: 10px;
+                i{
+                    width: 100%;
+                    height: 100%;
+                }
+                .shoppingCarText{
+                    white-space: nowrap;
+                    font-size: 8px;
+                    color: #aaa;
+                    text-align: center;
+                }
+            }
+            .like{
+                position: absolute;
+                right: 30px;
+                top: 20px;
+                width: 40px;
+                height: 40px; 
+                .likeText{
+                    white-space: nowrap;
+                    font-size: 8px;
+                    color: #aaa;
+                    text-align: center;
+                }
+            }
+            .infoName{
+                font-size: 25px;
+                color: #000;
+                font-weight: bolder;
+            }
+            .infoEnName{
+                font-size: 20px;
+                color: #aaa;
+                font-weight: 600;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            .price{
+                span{
+                    &:first-child{
+                        font-size: 16px;
+                        color: red;
+                    }
+                    &:last-child{
+                        font-size: 25px;
+                        color: red;
+                        font-weight: bolder;
+                    }
+                }
+                margin-bottom: 20px;
+            }
+            .line{
+                border-bottom: 1px solid #994A1B;
+            }
+            .introduce{
+                margin-top: 20px;
+                .introduceTitle{
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                >div{
+                    color: #999;
+                    font-size: 16px;
+                    margin: 5px 0;
+                }
+            }
+
+        }
+        .bigImg{
+            flex-grow: 0;
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        
+    }
+    .detailedNav{
+        height: 50px;
+        width: 100%;
+        .van-goods-action{
+            button{
+                margin: 0px 20px;
+                border-radius: 20px;
+                &.van-goods-action-button--first{
+                    border: 1px solid #994A1B;
+                    color: #994A1B;
+                    background: #FFF;
+                }
+            }
+        }
+    }
+    .popupBottom{
+        .popupBottomBox{
+            height: 50%;
+            .specs{
+                display: flex;
+                width: 100%;
+                height: 100%;
+                flex-direction: column;
+                .specsHeader{
+                    flex-grow:0 ;
+                    padding: 15px 15px 0 15px;
+                    width: calc(100% - 30px);
+                    height: 80px;
+                    display: flex;
+                    .specsImg{
+                        margin-right:10px ;
+                        flex-grow: 0;
+                        width: 80px;
+                        height: 80px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .specsMessage{
+                        flex-grow: 1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        >div{
+                            flex: 1;
+                            font-size: 18px;
+                            line-height: 40px;
+                        }
+                        
+                    }
+                    .specsCount{
+                        display: flex;
+                        align-items: flex-end;
+                        width: 100px;
+                        flex-grow: 0;
+                        .van-stepper{
+                           button{
+                               width: 30px !important;
+                               height: 30px !important;
+                               &.van-stepper__plus{
+                                   background: #994A1B;
+                               }
+                               &.van-stepper__minus{
+                                    border:1px solid #994A1B;
+                                    color: #994A1B;
+                               }
+                               &.van-stepper__minus--disabled{
+                                   background: #D6D5D5;
+                                   color: #FFF;
+                                   border: 1px solid #D6D5D5;
+                               }
+                                &.van-stepper__minus::before, .van-stepper__plus::before{
+                                   height: 3px !important;
+                                   width: 60% !important;
+                               }
+                              
+                           }
+                        }
+                    }
+                }
+                .selectSpecsBottom{
+                    flex-grow:0 ;
+                    width: 100%;
+                    height: 50px;
+                    position: absolute;
+                    bottom: 0;
+                    display: flex;
+                    border-radius:8px ;
+                    overflow: hidden;
+                    button{
+                        outline: none;
+                        font-size: 20px;
+                        font-weight: bolder;
+                        flex:1;
+                        border: 2px solid #994A1B;
+                        background: #FFF;
+                        &:first-child{
+                            color: #994A1B;
+                            border-radius: 8px 0px 0px 8px;
+                            border-right: none;
+                        }
+                        &:last-child{
+                            border-left:none ;
+                            border-radius: 0 8px 8px 0;
+                            background: #994A1B;
+                            color: #FFF;
+                        }
+                    }
+                }
+                .selectSpecs{
+                    margin-bottom: 65px;
+                    flex-grow:1 ;
+                    padding: 0 15px;
+                    width: calc(100% - 30px) ;
+                    display: flex;
+                    flex-direction: column;
+                    .desc{
+                        flex: 1;
+                        height: 50px;
+                        display: flex;
+                        flex-direction: column;
+                        .descName{
+                            flex-grow: 0;
+                            font-size: 20px;
+                            height: 22px;
+                            line-height: 22px;
+                        }
+                        .descSel{
+                            flex-grow: 1;
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                            span{
+                                font-size: 16px;
+                                color:#994A1B ;
+                                line-height: 45px;
+                                text-align: center;
+                                display: inline-block;
+                                width: 80px;
+                                border-radius: 30px;
+                                height: 45px;
+                                border:1px solid #994A1B;
+                                &.selectActive{
+                                    background:#994A1B ;
+                                    color: #FFF;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @keyframes flash {
+        0%{
+            opacity: 1;
+        }
+        50%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+}

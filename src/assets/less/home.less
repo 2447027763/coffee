@@ -1,0 +1,110 @@
+.home{
+    .swipe{
+        width: 100%;
+        height: 280px;
+        overflow: hidden;
+        position: relative;
+        .postion{
+            background: rgba(0,0,0,.2);
+            border-radius: 5px;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 99;
+            position: absolute;
+            width: 70%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            span{
+                padding: 0 10px;
+                flex-grow: 0;
+                width: 20px;
+                height: 20px;
+                svg{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            input{
+                flex-grow: 1;
+                background: transparent;
+                outline: none;
+                border: none;
+                color: #FFF;
+                font-size: 14px;
+                font-weight: bolder;
+            }
+        }
+        .search{
+            border-radius:5px ;
+            z-index: 99;
+            width: 20px;
+            height: 20px;
+            padding: 10px;
+            background: rgba(0,0,0,.2);
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            svg{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .van-swipe{
+            width: 100%;
+            height: 100%;
+        }
+        .bannerImg{
+            width: 100%;
+        }
+        .bannerDot{
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            display: flex;
+            width: 30%;
+            height: 10px;
+            align-items: flex-end;
+            span{
+                margin: 0 5px;
+                flex: 1;
+                display: inline-block;
+                width: 10px;
+                height: 5px;
+                background: #FFF;
+                &.active{
+                    background: #994A1B;
+                    width: 15px;
+                    height: 10px;
+                } 
+            }
+        }
+        
+    }
+    .hotSell{
+        width: calc(100% - 30px );
+        padding: 15px;
+        height: 500px;
+        background: #F6F0F3;
+        /deep/ .van-nav-bar{
+            border-radius: 7px;
+        }
+        .hotTile{
+            color: #994A1B;
+        }
+        .layout{
+            i{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin: 0 5px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    
+}

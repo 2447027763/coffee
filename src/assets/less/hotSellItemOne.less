@@ -1,0 +1,69 @@
+.hotSellItemOne{
+    margin-top: 10px;
+    .hotSellOne{
+        margin-bottom: 20px;
+        background: #994A1B;
+        border: 2px solid #994A1B;
+        position: relative;
+        overflow: hidden;
+        border-radius:20px ;
+        width: 100%;
+        height: 100%;
+        .img{
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            img{
+                width: 100%;
+            }
+            .hotIcon{
+                left: 0;
+                top: 0;
+                position: absolute;
+                background: url("../images/hot-icon.png") no-repeat;
+                width:50px;
+                height: 50px;
+                text-align: center;
+                line-height: 60px;
+                font-weight: bolder;
+                color: #FFF;
+                background-size:cover ;
+            }
+        }
+        .itemBottom{
+            width: 100%;
+            height: 50px;
+            background: #FFF;
+            display: flex;
+            border-radius: 0px 0px 20px 20px;
+            div{
+                flex: 1;
+                text-align: center;
+                font-weight: bolder;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                color: #994A1B;
+                &.itemPrice{
+                    background: #994A1B;
+                    border-radius: 20px;
+                    color: #FFF;
+                    span{
+                        vertical-align: bottom;
+                    }
+                }
+                div{
+                    text-align: center;
+                }
+                
+                
+            }
+        }
+
+    }
+    .space{
+        height: 50px;
+    }
+}

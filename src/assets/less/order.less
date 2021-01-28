@@ -1,0 +1,81 @@
+.order{
+    background: #FFFCF7;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .orderSearch{
+        flex-grow: 0;
+        .van-search__content{
+            background: #FFFCF7;
+        }
+    }
+    .hotSell{
+        flex-grow: 0;
+        padding: 10px 20px 0 20px;
+        font-size: 20px;
+        color: #994A1B;
+    }
+    .banner{
+        flex-grow: 0;
+        /deep/ .van-swipe-item{
+            height: 120px;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            .item{
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .orderBox{
+        overflow: hidden;
+        padding-top: 25px;
+        flex-grow: 1;
+        margin: 20px;
+        border-top: 1px solid black;
+        background: #F6F0F3;
+        display: flex;
+        .leftTypeNav{
+            overflow:scroll;
+            width: 20vw;
+            flex-grow: 0;
+            margin-right: 5vw;
+            padding-bottom:40px ;
+           
+            .leftTypeItem{
+                box-shadow: 0 0 2px 2px #eee;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                height: 20vw;
+                background: #FFF;
+                border-radius: 15px;
+                margin:0px 0 10px 3px;
+                font-size: 16px;
+                color: #994A1B;
+                .img{
+                    width: 40px;
+                    height: 40px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .rightOrder{
+            overflow: hidden;
+            flex-grow: 1;
+            height: 100%;
+        }
+
+    }
+}
