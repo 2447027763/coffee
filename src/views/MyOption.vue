@@ -214,7 +214,7 @@ export default {
       
     },
     replaceImg() {
-
+      // console.log("触发");
       //    console.log(this.toUpdataImg);
       this.toUpdataImg = this.toUpdataImg.split(",")[1];
       // console.log(this.toUpdataImg);
@@ -243,7 +243,7 @@ export default {
         },
       })
         .then((res) => {
-          console.log("res", res);
+          // console.log("res", res);
           if (res.data.code == "H001") {
             this.$toast(res.data.msg);
             this.$toast.clear();

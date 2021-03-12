@@ -324,7 +324,7 @@ export default {
         tokenString: token,
       },
     }).then((res) => {
-        console.log(res);
+        // console.log(res);
       if (res.data.code == 5000) {
         this.changeShoppingCarCount(res.data.result.length);
         this.carAllList = res.data.result.map((v) => {

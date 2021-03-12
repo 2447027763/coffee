@@ -188,7 +188,7 @@ import {mapState,mapMutations} from "vuex"
                         tokenString:token
                     }
                 }).then(res=>{
-                    console.log(res);
+                    // console.log(res);
                     if(res.data.code==900){
                         this.$toast(res.data.msg);
                         this.isCollection=false;

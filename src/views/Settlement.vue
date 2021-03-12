@@ -70,7 +70,7 @@ export default {
   },
   created() {
     let sids = this.sidsList.split("-");
-    console.log(sids);
+    // console.log(sids);
     this.allProduct = this.sidsList;
     let token = this.$cookies.get("tokenString");
     if (!token) {
@@ -116,7 +116,7 @@ export default {
             } else {
               this.changeDefaultAddressName("无地址，快去添加吧");
             }
-            console.log(this.defaultAddress);
+            // console.log(this.defaultAddress);
           } else {
             this.$toast(res.data.msg);
             // console.log(res);
@@ -167,7 +167,7 @@ export default {
       this.allProduct.forEach((v) => {
         sids.push(v.sid);
       });
-      console.log(sids);
+      // console.log(sids);
       let token = this.$cookies.get("tokenString");
       if (!token) {
         this.$toast("token过期了,请重新登录");

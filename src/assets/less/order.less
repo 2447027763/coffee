@@ -17,8 +17,12 @@
     }
     .banner{
         flex-grow: 0;
-        /deep/ .van-swipe-item{
-            height: 120px;
+        height: 120px !important;
+        .van-swipe{
+            height: 100%;
+        }
+        .van-swipe-item{
+            height: 120px !important;
             padding: 10px 20px;
             box-sizing: border-box;
             .item{
@@ -42,12 +46,12 @@
         background: #F6F0F3;
         display: flex;
         .leftTypeNav{
-            overflow:scroll;
+            overflow-y:scroll;
+            overflow-x: hidden;
             width: 20vw;
             flex-grow: 0;
-            margin-right: 5vw;
+            padding-right:10px ;
             padding-bottom:40px ;
-           
             .leftTypeItem{
                 box-shadow: 0 0 2px 2px #eee;
                 display: flex;
@@ -72,6 +76,7 @@
             }
         }
         .rightOrder{
+            margin-left: 2vw;
             overflow: hidden;
             flex-grow: 1;
             height: 100%;

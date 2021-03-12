@@ -32,17 +32,19 @@
         .bg{
             height: 80px;
             width: 100%;
-            background-color: #994A1B;
+            background-color: #994A1B !important;
             position: relative;
             top: -1px;
             z-index: 222;
         }
         .topHeaderBox{
-        background: #994A1B;
+        background: #994A1B !important;
         /deep/ .van-nav-bar{
             background-color: #994A1B !important;
         }
-        
+        .van-nav-bar__content{
+            background: #994A1B !important;
+        }
         .topHeaderTitle{
             font-size: 20px;
             color: #FFF;

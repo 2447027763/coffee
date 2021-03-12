@@ -2,7 +2,14 @@
     height: 100%;
     background: #FFFCF7;
     
-    
+    .van-uploader__input{
+        width: 100%;
+        height: 150px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+    }
     .imgShow{
         /deep/ .van-popup{
             width: 200px;
@@ -10,6 +17,7 @@
             .van-uploader{
                 width: 100%;
                 height: 100%;
+                
                 .van-uploader__wrapper{
                     width: 100%;
                     height: 100%;
@@ -20,12 +28,14 @@
                             position: absolute;
                             left: 50%;
                             transform: translateX(-50%);
+                            z-index: 555;
                         }
                         .confirm{
                             z-index: 2014;
                             width: 100%;
                             position: absolute;
                             bottom: 0;
+                            z-index: 999;
                         }
                     }
                 }
@@ -42,6 +52,7 @@
             img{
                 width: 100%;
                 height: 100%;
+               
             }
             button{
                 margin: 0 auto;
@@ -55,6 +66,10 @@
     /deep/ .van-hairline--bottom::after{
         border: none;
     }
+    .van-button{
+        width: 100%;
+        margin-top: 10px;
+    }
     .optionBox{
         z-index: 999;
         top: -20px;
@@ -67,6 +82,7 @@
             position: relative;
             height: 100px;
             .img{
+                background: #fff;
                 border: 10px solid #FFF;
                 top: -20px;
                 left: 50%;

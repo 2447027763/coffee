@@ -1,6 +1,6 @@
 <template>
   <div class="addressList">
-    <div class="addressListHeader" @click="add">
+    <div class="addressListHeader">
       <van-nav-bar left-arrow>
         <template #left>
           <div class="addressListNavLeft" @click="back">
@@ -41,9 +41,6 @@ import "../assets/less/addressList.less";
 import { mapMutations } from "vuex";
 export default {
   methods: {
-    add(){
-      console.log(this.list);
-    },
     ...mapMutations(["changeDefaultAddress"]),
     back() {
       this.$router.go(-1);
